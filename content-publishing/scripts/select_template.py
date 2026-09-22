@@ -54,7 +54,6 @@ def main() -> None:
     if args.list:
         print("\n".join(templates))
         return
-
     name = (args.template or default_name()).strip()
     if not SEMANTIC_NAME.fullmatch(name) or name not in templates:
         raise SystemExit(f"Unknown template '{name}'. Available: {', '.join(templates)}")
@@ -66,3 +65,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

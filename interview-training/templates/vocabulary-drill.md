@@ -1,12 +1,15 @@
 # Vocabulary Retrieval Drill
 
-## Rules
-- Give one scenario.
-- Learner answers with one professional term.
-- If incorrect, explain in one short sentence and immediately retest.
-- Periodically reverse direction: term → plain-language explanation.
-- Recycle failed terms later in the same session.
+## Format
+
+1. Give one short work scenario without naming the target term.
+2. Ask for one professional term and a plain-language definition.
+3. If incorrect, explain the distinction in one short sentence and immediately retest with a new scenario.
+4. Reverse direction periodically: term to plain-language explanation.
+5. Recycle failed terms later in the same session.
 
 ## Example
-Prompt: “A request is executed twice but must not create two orders.”
-Expected term: “Idempotency.”
+
+Prompt: `A request may run twice, but the second execution must not create another order. What property is required?`
+
+Expected response: `Idempotency — repeated execution produces no duplicate business effect.`

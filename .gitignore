@@ -1,11 +1,33 @@
-# Private user context
+# Local private context. Keep public instructions and examples only.
 **/private/*
 !**/private/README.md
+!**/private/*.example.md
+**/private/assets/
 
-# Local secrets / personal style
+# Local preferences, profiles, and secrets
 **/.env
+**/.env.*
+!**/.env.example
 **/personal-style.md
+**/user-profile.md
+**/brand-profile.md
+**/candidate-profile.md
+**/interview-history.md
+**/project-context.md
+**/subject-profile.md
+**/*.local.md
+.privacy-denylist
+
+# Generated output
+**/output/
+**/dist/
 
 # Python
 __pycache__/
 *.pyc
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

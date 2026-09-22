@@ -1,34 +1,39 @@
 # Interview Training
 
-A reusable, platform-neutral skill for AI Product / Agent / AI Solutions/FDE interview practice.
+## 这个 Skill 做什么
 
-## What it does
-Runs structured training with terminology retrieval, sentence compression, AI fundamentals, realistic interview questions, and spaced repetition.
+用于结构化面试训练：模拟问答、术语提取、答案压缩、追问、反馈分类和旧题复习。它不绑定具体 Agent 或编程工具。
 
-## User configuration
-Create local private files when personalized training is needed, for example:
-- `private/candidate-profile.md`
-- `private/interview-history.md`
-- `private/personal-vocabulary.md`
+## 使用者需要配置什么
 
-These files are ignored by Git.
+- `config/current_template.txt`：默认训练模板，一行一个模板名。
+- `private/candidate-profile.md`：目标岗位、真实经历与可公开口径。
+- `private/interview-history.md`：历史问题、反馈与待复习题。
+- `private/personal-style.md`：希望保留的表达习惯和反馈偏好。
 
-The default session template is selected by `config/current_template.txt`.
+后三项只保存在本地。运行根目录的 `python3 scripts/bootstrap_local.py --skill interview-training` 可从示例生成占位文件。
 
-## Structure
+## 目录结构
+
 ```text
 interview-training/
-├── SKILL.md
-├── README.md
-├── config/current_template.txt
-├── templates/
-│   ├── daily-30min.md
-│   ├── mock-interview.md
-│   ├── vocabulary-drill.md
-│   └── archive/
-├── scripts/select_template.py
-└── private/README.md
+├── SKILL.md                         # 通用训练流程
+├── README.md                        # 使用说明
+├── config/current_template.txt      # 当前默认模板
+├── templates/                       # 可切换训练模板
+│   └── archive/                     # 停用模板，只归档不删除
+├── scripts/select_template.py       # 模板选择与校验
+└── private/                         # 本地个人资料与偏好
 ```
 
-## Template rules
-User-specified template wins. Otherwise use `current_template.txt`. Add templates with semantic names; move retired templates to `templates/archive/`.
+查看当前模板：
+
+```bash
+python3 scripts/select_template.py --path-only
+```
+
+临时切换模板不会修改默认配置：
+
+```bash
+python3 scripts/select_template.py --template mock-interview
+```
