@@ -1,0 +1,11 @@
+# Private user context
+**/private/*
+!**/private/README.md
+
+# Local secrets / personal style
+**/.env
+**/personal-style.md
+
+# Python
+__pycache__/
+*.pyc
