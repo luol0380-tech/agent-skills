@@ -41,6 +41,7 @@ skill-name/
 - `content-publishing/`：长文、短内容与发布包制作。
 - `profile-poster-kit/`：人物介绍海报与角色设定图配套制作。
 - `interview-animation-kit/`：访谈故事动画插片制作与交接。
+- `project-progress-learning-report/`：项目阶段进展、交付反馈与用户学习验收汇报。
 
 ## 校验
 
