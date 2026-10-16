@@ -25,3 +25,14 @@ content-publishing/
 ├── scripts/select_template.py       # 模板选择与校验
 └── private/                         # 本地品牌、文风与素材
 ```
+
+## 两套文章模板（统一入口）
+
+- `ai-practice`：AI实战，包含写作、封面、正文排版和结尾规则。
+- `family-growth`：家庭成长，使用叙事表达与笔记风封面，不自动带入AI系列信息。
+
+优先使用用户指定的模板，否则根据核心内容判断。默认整套使用；可说“正文保留，只换家庭成长封面”或“只用家庭成长排版”。已确认成品优先，只修改指定部分。
+
+原有长文、短内容和发布包模板仍可使用。通过 `--template ai-practice` 或 `--template family-growth` 查看新增模板。排版用 `scripts/render_wechat.py`，输入说明见 `references/article-schema.md`。
+
+个人确认过的封面、排版截图、头像和真实案例放入本地 `private/`，公开仓库只保留通用规则。远端更新不会覆盖本地私人配置。

@@ -1,6 +1,6 @@
 ---
 name: content-publishing
-description: Turn verified source material into long-form articles, short social posts, and release packages while preserving facts, human voice, evidence, and publication safety. Use for planning, drafting, revising, repurposing, packaging, or preparing content for an external publishing system.
+description: Turn verified source material into long-form articles, short social posts, and release packages while preserving facts, human voice, evidence, and publication safety. Support AI-practice and family-growth writing, cover, layout, and ending templates through this single entry. Use for planning, drafting, revising, repurposing, packaging, or preparing content for an external publishing system.
 ---
 
 # Content Publishing
@@ -33,9 +33,14 @@ description: Turn verified source material into long-form articles, short social
 
 ## Template selection
 
-1. If the user names a template, use that template.
-2. Otherwise read the single template name from `config/current_template.txt`.
-3. Load the matching Markdown file from `templates/`.
-4. Use semantic filenames; do not use version labels such as `v1` or `new2`.
-5. Move retired templates to `templates/archive/`; never delete them during normal maintenance.
-6. Keep every template body, layout, and filled example outside this file.
+1. Resolve `writing_template`, `cover_template`, and `layout_template` independently. Read `references/template-routing.md`.
+2. Prefer an explicit user choice; otherwise select `ai-practice` for an AI workflow story or `family-growth` for family, relationship, or parenting narrative. Using AI to edit a family story does not change its subject.
+3. Default all components to the selected article template. Allow cover-only or layout-only overrides without rewriting approved text or changing its ending.
+4. Load `templates/ai-practice.md` or `templates/family-growth.md`. Each defines writing, cover, body layout, and ending rules. Approved component-specific references override generic style defaults.
+5. For other content forms, preserve the existing `--template` selector and `config/current_template.txt` fallback. Keep template bodies and examples outside this entry.
+6. Preserve the latest approved selections through follow-ups; change only requested components. Never reuse rejected visuals as master references.
+7. Keep retired templates in `templates/archive/`. Keep private brand, avatars, real cases and approved reference images in ignored `private/` files; never copy them into public templates.
+
+## Render an article
+
+Use `scripts/render_wechat.py INPUT.json OUTPUT.html` for self-contained HTML. Read `references/article-schema.md` for the schema. `layout_template` controls visuals only; the writing template controls ending and series rules. Never infer series numbers or inject a fixed signature from the cover or layout. Review the rendered result before delivery.
