@@ -37,6 +37,7 @@ skill-name/
 ## 已收录 Skills
 
 - `interview-training/`：结构化面试训练与复习。
+- `ai-pm-interview-coach/`：AI 产品经理 / Agent 产品经理面试复盘、模拟训练与本地私有题库沉淀。
 - `meeting-notes/`：会议纪要模板试点。
 - `content-publishing/`：长文、短内容与发布包制作。
 - `profile-poster-kit/`：人物介绍海报与角色设定图配套制作。
