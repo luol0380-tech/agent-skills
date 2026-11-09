@@ -13,7 +13,12 @@ description: 用于AI产品经理、Agent产品经理、AI产品负责人及FDE�
 - `@ai-pm-interview-coach 模拟面试`：一次只提一道题，等回答后点评。
 - `@ai-pm-interview-coach 训练P0`：优先训练当前高风险题。
 - `@ai-pm-interview-coach 整理题库`：按原问题、原回答、问题/亮点、建议回答、追问、适用岗位沉淀。
+- `@ai-pm-interview-coach 复盘今天的面试`：先核对当天原始转写或录音；缺失时列出所需材料，不补写原话。
+- `@ai-pm-interview-coach 更新我的面试题库`：依据真实面试材料追加题目，不覆盖已有原话。
 - `@ai-pm-interview-coach 30秒回答`、`2分钟回答`：调整回答长度。
+
+## 本地资料加载
+每次执行复盘、模拟面试、P0训练或题库更新前，读取本 Skill 目录下存在的 `private/profile.md`、`private/question-bank.md`、`private/training-progress.md`；复盘时再查看 `private/interview-reviews/` 中相关的原始材料。缺失或只有占位内容时明确说明，不推断个人经历、训练成绩或面试原话。私人资料只在本地使用，不复制到公开模板或提交到仓库。
 
 ## 工作流
 1. 先读取完整面试转写、JD、简历和已有题库；未提供时不猜测。
